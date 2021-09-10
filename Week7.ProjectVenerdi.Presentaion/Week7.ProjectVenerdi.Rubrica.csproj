@@ -6,8 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Week7.ProjectVenerdi.Rubrica\Week7.ProjectVenerdi.RepositoryEF\Week7.ProjectVenerdi.RepositoryEF.csproj" />
     <ProjectReference Include="..\Week7.ProjectVenerdi.Core\Week7.ProjectVenerdi.Core.csproj" />
+    <ProjectReference Include="..\Week7.ProjectVenerdi.Mock\Week7.ProjectVenerdi.Mock.csproj" />
+    <ProjectReference Include="..\Week7.ProjectVenerdi.RepoEF\Week7.ProjectVenerdi.RepoEF.csproj" />
   </ItemGroup>
 
 </Project>

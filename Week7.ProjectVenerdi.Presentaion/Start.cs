@@ -2,7 +2,7 @@
 using Week7.ProjectVenerdi.Core.BusinessLayer;
 using Week7.ProjectVenerdi.Core.Entities;
 //using Week7.ProjectVenerdi.Mock;
-using Week7.ProjectVenerdi.RepositoryEF;
+using Week7.ProjectVenerdi.RepoEF;
 
 namespace Week7.ProjectVenerdi.Rubrica
 {

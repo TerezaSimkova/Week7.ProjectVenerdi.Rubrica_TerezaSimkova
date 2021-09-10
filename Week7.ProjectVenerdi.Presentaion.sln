@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.ProjectVenerdi.Core",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.ProjectVenerdi.Mock", "Week7.ProjectVenerdi.Mock\Week7.ProjectVenerdi.Mock.csproj", "{8C2494C6-508F-4E71-80BB-4753F045AA14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.ProjectVenerdi.RepositoryEF", "..\Week7.ProjectVenerdi.Rubrica\Week7.ProjectVenerdi.RepositoryEF\Week7.ProjectVenerdi.RepositoryEF.csproj", "{9580A31D-474E-43E1-98D2-E1BEDEC610D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.ProjectVenerdi.RepoEF", "Week7.ProjectVenerdi.RepoEF\Week7.ProjectVenerdi.RepoEF.csproj", "{3C4C8B64-4542-44AB-8FB9-A6BBD516EFD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{8C2494C6-508F-4E71-80BB-4753F045AA14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C2494C6-508F-4E71-80BB-4753F045AA14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C2494C6-508F-4E71-80BB-4753F045AA14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9580A31D-474E-43E1-98D2-E1BEDEC610D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9580A31D-474E-43E1-98D2-E1BEDEC610D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9580A31D-474E-43E1-98D2-E1BEDEC610D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9580A31D-474E-43E1-98D2-E1BEDEC610D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C4C8B64-4542-44AB-8FB9-A6BBD516EFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C4C8B64-4542-44AB-8FB9-A6BBD516EFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C4C8B64-4542-44AB-8FB9-A6BBD516EFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C4C8B64-4542-44AB-8FB9-A6BBD516EFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

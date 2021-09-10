@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Week7.ProjectVenerdi.Rubrica\Week7.ProjectVenerdi.RepositoryEF\Week7.ProjectVenerdi.RepositoryEF.csproj" />
+    <ProjectReference Include="..\Week7.ProjectVenerdi.Core\Week7.ProjectVenerdi.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -25,6 +25,9 @@ namespace Week7.ProjectVenerdi.Rubrica
                 Console.WriteLine("2. Aggiungi un nuovo contatto:");
                 Console.WriteLine("3. Aggiungi un nuovo l'indirizzo:");
                 Console.WriteLine("4. Elimina un contatto:");
+                Console.WriteLine("5. Vusializza tutti gli indirizzi:");
+                Console.WriteLine("6. Modifica il typo del indirizzo:");
+                Console.WriteLine("7. Modifica il contatto:");
 
                 Console.WriteLine("\n0. Per uscire.\n");
 
@@ -33,7 +36,7 @@ namespace Week7.ProjectVenerdi.Rubrica
                 {
                     Console.WriteLine("Cosa scegli di fare?\n");
 
-                } while (!int.TryParse(Console.ReadLine(), out scelta) || scelta < 0 || scelta > 4);
+                } while (!int.TryParse(Console.ReadLine(), out scelta) || scelta < 0 || scelta > 7);
 
                 switch (scelta)
                 {
@@ -49,11 +52,88 @@ namespace Week7.ProjectVenerdi.Rubrica
                     case 4:
                         DeleteContact();
                         break;
+                    case 5:
+                        ShowAddress();
+                        break;
+                    case 6:
+                        ModificaTypeOfAddress();
+                        break;
+                    case 7:
+                        ModificaContatto();
+                        break;
                     case 0:
                         continua = false;
                         Console.Write("*** Arrivederci ***");
                         break;
                 }
+            }
+        }
+
+        private static void ModificaContatto()
+        {
+            ShowContacts();
+
+            int id;
+            do
+            {
+                Console.WriteLine("Quale contatto vuoi modificare?");
+            } while (!int.TryParse(Console.ReadLine(),out id));
+
+            String nome = String.Empty;
+            String cognome = String.Empty;
+
+            do
+            {
+                Console.WriteLine("Scrivi nuovo nome:");
+                nome = Console.ReadLine();
+
+            } while (String.IsNullOrEmpty(nome));
+
+            do
+            {
+                Console.WriteLine("Scrivi nuovo cognome:");
+                cognome = Console.ReadLine();
+
+            } while (String.IsNullOrEmpty(cognome));
+
+            var cambio = bl.ModificaContact(id, nome, cognome);
+            Console.WriteLine(cambio);
+
+
+        }
+
+        private static void ModificaTypeOfAddress()
+        {
+            ShowAddress();
+            int id;
+            do
+            {
+                Console.WriteLine("Scegli l'indirizzo da modificare:");
+
+            } while (!int.TryParse(Console.ReadLine(), out id));
+
+            String typeOfAddress = String.Empty;
+            do
+            {
+                Console.WriteLine("Inserisci nuovo tipo del indirizzo:");
+                typeOfAddress = Console.ReadLine();
+
+            } while (String.IsNullOrEmpty(typeOfAddress));
+
+            var cambio = bl.ModificaAddress(id,typeOfAddress);
+            Console.WriteLine(cambio);
+        }
+
+        private static void ShowAddress()
+        {
+            var address = bl.GetAllAddress();
+            if (address.Count == 0)
+            {
+                Console.WriteLine("Non ce nessun indirizzo da visualizzare!");
+            }
+            foreach (var a in address)
+            {
+                Console.WriteLine(a.ToString());
             }
         }
 

@@ -39,5 +39,13 @@ namespace Week7.ProjectVenerdi.RepoEF
         {
             return rct.Addresses.FirstOrDefault(a => a.IdContact == idAddress);
         }
+
+        public Address Update(Address addressEsistente)
+        {
+            var oldTypeAddress = rct.Addresses.FirstOrDefault(a => a.IdAddress == addressEsistente.IdAddress);
+            oldTypeAddress.TypeOfAddress = addressEsistente.TypeOfAddress;
+            rct.SaveChanges();
+            return addressEsistente;
+        }
     }
 }

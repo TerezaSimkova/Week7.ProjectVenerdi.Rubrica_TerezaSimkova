@@ -14,6 +14,7 @@ namespace Week7.ProjectVenerdi.Core.BusinessLayer
         public string AddNewAddress(Address newAdress);
         public string DeleteContact(int idScelto);
         public List<Address> GetAllAddress();
-
+        public string ModificaAddress(int id, string typeOfAddress);
+        public string ModificaContact(int id, string nome, string cognome);
     }
 }

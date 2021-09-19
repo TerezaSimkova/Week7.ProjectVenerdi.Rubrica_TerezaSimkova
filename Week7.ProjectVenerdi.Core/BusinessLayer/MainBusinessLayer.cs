@@ -74,5 +74,36 @@ namespace Week7.ProjectVenerdi.Core.BusinessLayer
         {
             return contactRepo.GetAll();         
         }
+
+        public string ModificaAddress(int id,string typeOfAddress)
+        {
+            var addressEsistente = addressRepo.GetById(id);
+            if (addressRepo == null)
+            {
+                return "Non esiste un indirizzo con questo ID!";
+            }
+            else
+            {
+                addressEsistente.TypeOfAddress = typeOfAddress;
+                addressRepo.Update(addressEsistente);
+                return "L'indirizzo e stato modificato con successo!";
+            }
+        }
+
+        public string ModificaContact(int id, string nome, string cognome)
+        {
+            var contattoEsistente = contactRepo.GetById(id);
+            if (contactRepo == null)
+            {
+                return "Non esiste un contatto con questo ID!";
+            }
+            else
+            {
+                contattoEsistente.Name = nome;
+                contattoEsistente.Surname = cognome;
+                contactRepo.Update(contattoEsistente);
+                return "Contatto e stato modificato con successo!";
+            }
+        }
     }
 }

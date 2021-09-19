@@ -40,5 +40,14 @@ namespace Week7.ProjectVenerdi.RepoEF
         {
             return rct.Contacts.FirstOrDefault(c => c.IdContact == idContact);
         }
+
+        public Contact Update(Contact contattoEsistente)
+        {
+            var oldContact = rct.Contacts.FirstOrDefault(c => c.IdContact == contattoEsistente.IdContact);
+            oldContact.Name = contattoEsistente.Name;
+            oldContact.Surname = contattoEsistente.Surname;
+            rct.SaveChanges();
+            return contattoEsistente;
+        }
     }
 }

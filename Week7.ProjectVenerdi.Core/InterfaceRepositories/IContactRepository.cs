@@ -10,5 +10,6 @@ namespace Week7.ProjectVenerdi.Core.InterfaceRepositories
     public interface IContactRepository : IRepository<Contact>
     {
         public Contact GetById(int idContact);
+        public Contact Update(Contact contattoEsistente);
     }
 }

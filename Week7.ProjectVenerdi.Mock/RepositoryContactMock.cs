@@ -39,5 +39,13 @@ namespace Week7.ProjectVenerdi.Mock
         {
             return contacts.FirstOrDefault(c => c.IdContact == idContact);
         }
+
+        public Contact Update(Contact contattoEsistente)
+        {
+            var oldContact = contacts.FirstOrDefault(c => c.IdContact == contattoEsistente.IdContact);
+            oldContact.Name = contattoEsistente.Name;
+            oldContact.Surname = contattoEsistente.Surname;
+            return contattoEsistente;
+        }
     }
 }

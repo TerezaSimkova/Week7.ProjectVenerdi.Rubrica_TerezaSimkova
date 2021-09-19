@@ -13,9 +13,21 @@ namespace Week7.ProjectVenerdi.Core.Entities
         public string Surname { get; set; }
         public List<Address> addresses { get; set; } = new List<Address>();
 
+
+
         public override string ToString()
         {
-            return $"Id:{IdContact}\t{Name}_{Surname}\n";
+            //string s = "";
+            //for (int i=0; i<addresses.Count; i++)
+            //{
+            //    s += addresses[i].ToString();
+            //    if (i != addresses.Count - 1)
+            //    {
+            //        s += " | ";
+            //    }
+            //}
+
+            return $"Id:{IdContact}\t{Name} {Surname} \n"; //{s}
         }
     }
 }

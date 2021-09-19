@@ -46,5 +46,11 @@ namespace Week7.ProjectVenerdi.Mock
             return addresses.FirstOrDefault(a => a.IdAddress == idAddress);
         }
 
+        public Address Update(Address addressEsistente)
+        {
+            var oldTypeAddress = addresses.FirstOrDefault(a => a.IdAddress == addressEsistente.IdAddress);
+            oldTypeAddress.TypeOfAddress = addressEsistente.TypeOfAddress;
+            return addressEsistente;
+        }
     }
 }

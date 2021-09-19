@@ -10,5 +10,6 @@ namespace Week7.ProjectVenerdi.Core.InterfaceRepositories
     public interface IAddressRepository : IRepository<Address>
     {
         public Address GetById(int idAddress);
+        public Address Update(Address addressEsistente);
     }
 }
